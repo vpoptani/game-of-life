@@ -11,6 +11,7 @@ pipeline {
              post {
                  always {
                      jiraSendDeploymentInfo environmentId: 'dhs-stage-01', environmentName: 'Alcon Staging Environment', environmentType: 'staging', site: 'dhs-ops.atlassian.net'
+                     jiraSendBuildInfo branch: 'master', site: 'dhs-ops.atlassian.net'
                  }
              }
          }
